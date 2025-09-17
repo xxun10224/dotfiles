@@ -1,0 +1,54 @@
+[mgr]
+sort_dir_first = false
+ratio = [1, 4, 4]
+
+[preview]
+wrap = "yes"
+max_width = 820
+max_height = 900
+
+[opener]
+edit = [
+  { run = '[ $TMUX ] && tmux split-window -fh -c "#{pane_current_path}" ${EDITOR:-vi} "$@" \; run-shell "~/.config/tmux/tmux-layout-dwindle brvc" || kitty --detach ${EDITOR:-vi} "$@"', block = false, for = "unix", desc = "Edit in new tmux-pane/kitty window" },
+]
+
+loop = [
+  { run = 'mpv --loop-playlist "$@"', orphan = true, desc = "loop" },
+]
+
+shuffle-loop = [
+  { run = 'mpv --loop-playlist --shuffle "$@"', orphan = true, desc = "shuffle-loop" }
+]
+
+bulk-rename = [
+  { run = '${EDITOR:-vi} "$@"', block = true }
+]
+
+wine = [
+  { run = 'wine "$@"', orphan = true, desc = "wine" }
+]
+
+[open]
+prepend_rules = [
+  { name = "bulk-rename.txt", use = "bulk-rename" },
+  { mime = "inode/directory", use = [ "loop", "shuffle-loop", "edit", "open", "reveal" ] },
+  # { mime = "image/gif", use = [ "loop", "open", "reveal" ] },
+  { mime = "application/microsoft.portable-executable", use = [ "wine", "open", "reveal" ] },
+]
+
+append_rules = [
+  { name = "*", use = [ "open", "edit", "reveal" ] },
+]
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
+
+[tasks]
+image_bound = [10000, 10000]

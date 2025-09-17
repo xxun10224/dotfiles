@@ -1,0 +1,13 @@
+[info]
+show = no
+
+[keys.viewer]
+k = step_up 10
+Shift+k = prev_file
+j = step_down 10
+Shift+j = next_file
+Ctrl+r = rotate_right
+Ctrl+Shift+r = rotate_left
+# mouse
+ScrollUp = prev_file
+ScrollDown = next_file

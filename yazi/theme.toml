@@ -1,0 +1,6 @@
+[tabs]
+active = { fg = "#e4e4e4" }
+inactive = { fg = "white" }
+
+[mgr]
+cwd = { fg = "#dd87f8" }

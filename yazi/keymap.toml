@@ -1,0 +1,87 @@
+[[mgr.prepend_keymap]]
+on   = "<Home>"
+run  = "arrow top"
+desc = "Move cursor to the top"
+
+[[mgr.prepend_keymap]]
+on   = "<End>"
+run  = "arrow bot"
+desc = "Move cursor to the bottom"
+
+[[mgr.prepend_keymap]]
+on   = "<Enter>"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "l"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "<Right>"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "y"
+run  = [ '''
+	shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list' --confirm
+''', "yank" ]
+desc = "Copy file as text/uri-list with wl-copy"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "w" ]
+run  = ['''
+  shell 'wl-copy < "$0"' --confirm
+''']
+desc = "Copy file content with wl-copy"
+
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Pictures"
+desc = "Goto ~/Pictures"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "v" ]
+run  = "cd ~/Videos"
+desc = "Goto ~/Videos"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "m" ]
+run  = "cd ~/Music"
+desc = "Goto ~/Music"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "t" ]
+run  = "cd /tmp"
+desc = "Goto /tmp"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "r" ]
+run  = "cd /"
+desc = "Goto /"
+
+[[mgr.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[mgr.prepend_keymap]]
+on = "<Esc>"
+run = "plugin smart-escape"
+
+[[mgr.prepend_keymap]]
+on = "e"
+run = ['''
+  shell '[ $TMUX ] && tmux split-window -fh -c "#{pane_current_path}" ${EDITOR:-vi} "$@" \; run-shell "~/.config/tmux/tmux-layout-dwindle brvc" || kitty --detach ${EDITOR:-vi} "$@"'
+''']

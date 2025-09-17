@@ -1,0 +1,27 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "3d1efb7"
+hash = "3996fc74044bc44144b323686f887e1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "3d1efb7"
+hash = "b3f1d6ec3721d4061aad5f69cddb0cf9"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "3d1efb7"
+hash = "a030fe48d91b04341ad2fba9be957df"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "3d1efb7"
+hash = "d6f60c24d8c0cf57a855bf46115b2502"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "3d1efb7"
+hash = "e01006bfb38951ea89031bd918b20dbb"
+
+[flavor]
+deps = []
