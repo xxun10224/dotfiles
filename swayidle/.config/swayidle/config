@@ -1,0 +1,5 @@
+timeout 150 'brightnessctl -s set 10' resume 'brightnessctl -r'
+timeout 240 'swaylock'
+timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+before-sleep 'swaylock > ~/logs/swaylock.log 2>&1'
+after-resume 'swaymsg "output * power on"'
