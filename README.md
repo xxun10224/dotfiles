@@ -11,6 +11,10 @@ git clone https://github.com/xxun10224/dotfiles.git
 
 ## for remote servers (bash and some TUI apps)
 ```bash
+cd ~/dotfiles/
+```
+
+```bash
 stow bash nvim tmux yazi
 ```
 
