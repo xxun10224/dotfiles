@@ -159,6 +159,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 #
 # apps
 #
+bindsym $mod+Shift+Return exec $term --app-id "floating kitty"
+bindsym $mod+Shift+a exec $term --app-id "floating yazi" bash -ic "a; bash"
 bindsym $mod+b exec kitty --app-id bluetui ~/github/bluetui/target/release/bluetui
 # bindsym $mod+b exec kitty --app-id bluetui bluetui
 bindsym $mod+Shift+b exec kitty --app-id battop ~/github/rust-battop/target/release/battop
@@ -329,6 +331,8 @@ exec_always "killall shikane; shikane"
 # exec_always "killall kanshi; kanshi"
 seat * hide_cursor 5000
 for_window [title="Meeting" app_id="Zoom Workplace"] inhibit_idle visible
+for_window [app_id="floating kitty"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
+for_window [app_id="floating yazi"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
 for_window [app_id="pulsemixer"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
 for_window [app_id="bluetui"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
 for_window [app_id="wlctl"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
