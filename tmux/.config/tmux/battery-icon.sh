@@ -2,6 +2,10 @@
 
 BAT_PATH="/sys/class/power_supply/BAT1"
 
+if [ ! -d "$BAT_PATH" ]; then
+  exit 1
+fi
+
 capacity=$(cat "$BAT_PATH/capacity")
 status=$(cat "$BAT_PATH/status")
 
@@ -25,5 +29,5 @@ if [ "$status" = "Charging" ]; then
   icon="󰂄"
 fi
 
-echo "$icon ${capacity}%"
+echo " $icon ${capacity}%"
 
