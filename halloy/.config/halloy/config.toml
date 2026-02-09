@@ -1,0 +1,20 @@
+# Halloy config.
+#
+# For a complete list of available options,
+# please visit https://halloy.chat/configuration.html
+
+# [servers.liberachat]
+# nickname = "halloy2352"
+# server = "irc.libera.chat"
+# channels = ["#halloy"]
+
+[servers.rizon]
+nickname = "mi92rk"
+server = "irc.rizon.net"
+channels = ["#nibl"]
+
+[file_transfer.auto_accept]
+enabled = true
+
+[file_transfer]
+save_directory = "~/xdcc/"
