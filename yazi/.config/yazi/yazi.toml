@@ -9,7 +9,7 @@ max_height = 900
 
 [opener]
 edit = [
-  { run = '[ $TMUX ] && tmux split-window -fh -c "#{pane_current_path}" ${EDITOR:-vi} "$@" \; run-shell "~/.config/tmux/tmux-layout-dwindle brvc" || kitty --detach ${EDITOR:-vi} "$@"', block = false, for = "unix", desc = "Edit in new tmux-pane/kitty window" },
+  { run = '[ $TMUX ] && tmux split-window -fh -c "#{pane_current_path}" ${EDITOR:-vi} "$@" \; run-shell "~/.config/tmux/tmux-layout-dwindle brvc" || kitty --single-instance --detach ${EDITOR:-vi} "$@"', block = false, for = "unix", desc = "Edit in new tmux-pane/kitty window" },
 ]
 
 loop = [
@@ -30,9 +30,9 @@ wine = [
 
 [open]
 prepend_rules = [
-  { name = "bulk-rename.txt", use = "bulk-rename" },
+  { url = "bulk-rename.txt", use = "bulk-rename" },
   { mime = "inode/directory", use = [ "loop", "shuffle-loop", "edit", "open", "reveal" ] },
-  # { mime = "image/gif", use = [ "loop", "open", "reveal" ] },
+  { mime = "image/gif", use = [ "loop", "open", "reveal" ] },
   { mime = "application/microsoft.portable-executable", use = [ "wine", "open", "reveal" ] },
 ]
 
