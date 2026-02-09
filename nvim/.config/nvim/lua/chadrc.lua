@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "decay",
+	theme = "yoru",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -15,10 +15,14 @@ M.base46 = {
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
---}
+M.ui = {
+  tabufline = {
+    lazyload = false,
+    order = { "treeOffset", "buffers" },
+  },
+  statusline = {
+    theme = "vscode",
+  }
+}
 
 return M
