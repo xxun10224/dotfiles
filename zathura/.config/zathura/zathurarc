@@ -1,4 +1,4 @@
-include catppuccin-macchiato
-# set recolor true
+# include catppuccin-mocha
+set recolor true
 set selection-clipboard clipboard
 set adjust_window width
