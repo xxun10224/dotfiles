@@ -67,7 +67,10 @@ focus_follows_mouse always
 # exec swayidle -dw > ~/logs/swayidle.log 2>&1
 exec_always "killall swayidle; swayidle -dw"
 # exec wayland-pipewire-idle-inhibit
-exec_always "killall wayland-pipewire-idle-inhibit; wayland-pipewire-idle-inhibit"
+# exec_always "killall wayland-pipewire-idle-inhibit; wayland-pipewire-idle-inhibit"
+# Enables inhibit_idle when playing audio
+# exec sway-audio-idle-inhibit
+exec_always "killall sway-audio-idle-inhibit; sway-audio-idle-inhibit"
 # exec swayidle -w \
 #          timeout 150 'brightnessctl -s set 10' resume 'brightnessctl -r' \
 #          timeout 240 'swaylock' \
