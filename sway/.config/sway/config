@@ -65,7 +65,7 @@ focus_follows_mouse always
 #
 # exec_always "killall hypridle; hypridle"
 # exec swayidle -dw > ~/logs/swayidle.log 2>&1
-exec_always "killall swayidle; swayidle -dw > ~/logs/swayidle.log 2>&1"
+exec_always "killall swayidle; swayidle -dw"
 # exec wayland-pipewire-idle-inhibit
 exec_always "killall wayland-pipewire-idle-inhibit; wayland-pipewire-idle-inhibit"
 # exec swayidle -w \
@@ -128,7 +128,7 @@ input type:touchpad {
     # Exit sway (logs you out of your Wayland session)
     # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
     bindsym $mod+Shift+e exec swaymsg exit
-    bindsym Scroll_Lock exec 'swaylock > ~/logs/swaylock.log 2>&1'
+    bindsym Scroll_Lock exec 'swaylock'
     # bindsym Scroll_lock exec hyprlock
     bindsym Shift+Scroll_Lock exec systemctl suspend
 #
