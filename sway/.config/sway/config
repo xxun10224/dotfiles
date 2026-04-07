@@ -106,7 +106,7 @@ input type:touchpad {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec $term --single-instance
 
     # Kill focused window
     # bindsym $mod+Shift+q kill
@@ -159,15 +159,15 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 #
 # apps
 #
-bindsym $mod+Shift+Return exec $term --app-id "floating kitty"
-bindsym $mod+Shift+a exec $term --app-id "floating yazi" bash -ic "a; bash"
-bindsym $mod+b exec kitty --app-id bluetui ~/github/bluetui/target/release/bluetui
-# bindsym $mod+b exec kitty --app-id bluetui bluetui
-bindsym $mod+Shift+b exec kitty --app-id battop ~/github/rust-battop/target/release/battop
-bindsym $mod+w exec kitty --app-id wlctl wlctl
-bindsym $mod+Semicolon exec kitty --app-id pulsemixer ~/github/pulsemixer/pulsemixer
-bindsym $mod+space exec kitty --app-id btop ~/github/btop/bin/btop
-bindsym $mod+Shift+space exec kitty --app-id htop htop
+bindsym $mod+p exec hyprpicker -a
+bindsym $mod+Shift+Return exec $term --app-id "floating kitty" --single-instance
+bindsym $mod+Shift+a exec $term --single-instance --app-id "floating yazi" bash -ic "a" 
+bindsym $mod+b exec $term --single-instance --app-id bluetui bluetui
+bindsym $mod+Shift+b exec $term --single-instance --app-id battop ~/github/rust-battop/target/release/battop
+bindsym $mod+w exec $term --single-instance --app-id wlctl wlctl
+bindsym $mod+Semicolon exec $term --single-instance --app-id pulsemixer ~/github/pulsemixer/pulsemixer
+bindsym $mod+space exec $term --single-instance --app-id btop ~/github/btop/bin/btop
+bindsym $mod+Shift+space exec $term --single-instance --app-id htop htop
 bindsym $mod+t exec Telegram
 #
 # Moving around:
