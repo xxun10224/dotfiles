@@ -11,3 +11,5 @@ export VISUAL="nvim"
 # nvim man pager
 export MANPAGER="nvim +Man!"
 export MANWIDTH=999
+
+export QT_QPA_PLATFORMTHEME=qt6ct
