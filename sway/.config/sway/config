@@ -347,7 +347,7 @@ exec_always "killall dunst fcitx5 blueman-applet; dunst & fcitx5 & blueman-apple
 # exec shikane
 exec_always "killall shikane; shikane"
 # exec_always "killall kanshi; kanshi"
-seat * hide_cursor 5000
+seat * hide_cursor 3000
 for_window [title="Meeting" app_id="Zoom Workplace"] inhibit_idle visible
 for_window [app_id="floating kitty"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
 for_window [app_id="floating yazi"] floating enable, move position center, resize set 90 ppt 90 ppt, opacity 0.9
