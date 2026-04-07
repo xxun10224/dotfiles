@@ -9,10 +9,10 @@
 daemonize
 show-failed-attempts
 ignore-empty-password
-indicator-idle-visible
+# indicator-idle-visible
 indicator-radius=150
 
-color=131020
+color=000000
 
 # catppuccin
 # color=1e1e2e
