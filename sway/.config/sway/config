@@ -166,6 +166,7 @@ bindsym XF86AudioLowerVolume exec (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep 
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && (wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo 0 > $WOBSOCK) || wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g' > $WOBSOCK
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 bindsym Pause exec playerctl play-pause
+bindsym XF86Calculator exec playerctl play-pause
 #
 # brightness
 #
