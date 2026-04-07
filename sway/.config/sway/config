@@ -19,7 +19,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu rofi -show run | xargs swaymsg exec --
+set $menu tofi-run | xargs swaymsg exec --
 
 mouse_warping container
 focus_follows_mouse always
