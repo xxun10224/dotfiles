@@ -85,3 +85,8 @@ on = "e"
 run = ['''
   shell '[ $TMUX ] && tmux split-window -fh -c "#{pane_current_path}" ${EDITOR:-vi} "$@" \; run-shell "~/.config/tmux/tmux-layout-dwindle brvc" || kitty --detach ${EDITOR:-vi} "$@"'
 ''']
+
+[[mgr.prepend_keymap]]
+on = "t"
+run = "tab_create --current"
+desc = "Create a new tab from hovered path or CWD"

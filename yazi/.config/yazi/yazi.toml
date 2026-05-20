@@ -36,19 +36,19 @@ prepend_rules = [
   { mime = "application/microsoft.portable-executable", use = [ "wine", "open", "reveal" ] },
 ]
 
-append_rules = [
-  { name = "*", use = [ "open", "edit", "reveal" ] },
-]
+# append_rules = [
+#   { name = "*", use = [ "open", "edit", "reveal" ] },
+# ]
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-url = "*"
-run  = "git"
+url   = "*"
+run   = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-url = "*/"
-run  = "git"
+url   = "*/"
+run   = "git"
+group = "git"
 
 [tasks]
 image_bound = [10000, 10000]

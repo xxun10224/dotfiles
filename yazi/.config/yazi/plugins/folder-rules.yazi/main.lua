@@ -17,7 +17,7 @@ return {
         ps.sub("cd", function()
             local dir = tostring(cx.active.current.cwd)
             if string.find(dir, "Downloads") then
-                ya.mgr_emit("sort", { "mtime", reverse = true, dir_first = false })
+                ya.emit("sort", { "mtime", reverse = true, dir_first = false })
             -- else
             --     ya.mgr_emit("sort", { "natural", reverse = false, dir_first = true })
             end
