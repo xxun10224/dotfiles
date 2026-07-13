@@ -1,0 +1,133 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "calls": {
+    "share_on_join": false
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "diff_view_style": "unified",
+  "git_panel": {
+    "dock": "left",
+    "tree_view": false
+  },
+  "terminal": {
+    "dock": "bottom"
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "vim": {
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+  "ssh_connections": [
+    {
+      "host": "senselab",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/xxun/a515-56g-58u0/Documents/nctucs/graduate_school/1141/Embedded_System_Design/labs/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/xxun/a515-56g-58u0/Documents/nctucs/undergraduate/1111/netprog/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/xxun/a515-56g-58u0/Documents/nctucs/undergraduate/1122/unixprog/hw/hw3"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "192.168.20.146",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/trista/test/scalable-invivo-sung/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "192.168.20.100",
+      "username": "sense",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/sense/project1/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/sense/project2"
+          ]
+        },
+        {
+          "paths": [
+            "/home/sense/project2/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "ns-project",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/bswu/project2/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.4-mini",
+        "mode": "auto",
+        "reasoning_effort": "medium"
+      },
+      "type": "registry"
+    }
+  },
+  "icon_theme": "Catppuccin Mocha",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "ui_font_size": 17.0,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+}

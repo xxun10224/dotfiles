@@ -1,0 +1,85 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor || OutlinePanel || ProjectPanel",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // bash emacs bindings
+      "ctrl-l": ["terminal::SendKeystroke", "ctrl-l"],
+      "ctrl-p": ["terminal::SendKeystroke", "ctrl-p"],
+      "ctrl-n": ["terminal::SendKeystroke", "ctrl-n"],
+      "ctrl-k": ["terminal::SendKeystroke", "ctrl-k"],
+      "ctrl-j": ["terminal::SendKeystroke", "ctrl-j"],
+      "ctrl-e": ["terminal::SendKeystroke", "ctrl-e"],
+      "ctrl-a": ["terminal::SendKeystroke", "ctrl-a"],
+      "ctrl-w": ["terminal::SendKeystroke", "ctrl-w"],
+      "ctrl-r": ["terminal::SendKeystroke", "ctrl-r"],
+      "ctrl-f": ["terminal::SendKeystroke", "ctrl-f"],
+      "ctrl-b": ["terminal::SendKeystroke", "ctrl-b"],
+      "ctrl-h": ["terminal::SendKeystroke", "ctrl-h"],
+      "ctrl-t": ["terminal::SendKeystroke", "ctrl-t"],
+      // tmux config
+      "alt-s": ["terminal::SendKeystroke", "alt-s"],
+      "alt-space": ["terminal::SendText", "\u001b "],
+      "alt-d": ["terminal::SendKeystroke", "alt-d"],
+      "alt-enter": ["terminal::SendKeystroke", "alt-enter"],
+      "alt-q": ["terminal::SendKeystroke", "alt-q"],
+      "alt-h": ["terminal::SendKeystroke", "alt-h"],
+      "alt-j": ["terminal::SendKeystroke", "alt-j"],
+      "alt-k": ["terminal::SendKeystroke", "alt-k"],
+      "alt-l": ["terminal::SendKeystroke", "alt-l"],
+      "alt-f": ["terminal::SendKeystroke", "alt-f"],
+      "alt-`": ["terminal::SendKeystroke", "alt-`"],
+      "alt-1": ["terminal::SendKeystroke", "alt-1"],
+      "alt-2": ["terminal::SendKeystroke", "alt-2"],
+      "alt-3": ["terminal::SendKeystroke", "alt-3"],
+      "alt-4": ["terminal::SendKeystroke", "alt-4"],
+      "alt-5": ["terminal::SendKeystroke", "alt-5"],
+      "alt-6": ["terminal::SendKeystroke", "alt-6"],
+      "alt-7": ["terminal::SendKeystroke", "alt-7"],
+      "alt-8": ["terminal::SendKeystroke", "alt-8"],
+      "alt-;": ["terminal::SendKeystroke", "alt-;"],
+      "alt-|": ["terminal::SendKeystroke", "alt-|"],
+      "alt-\\": ["terminal::SendKeystroke", "alt-\\"],
+      "alt-tab": ["terminal::SendText", "\u001b\t"],
+      "alt-~": ["terminal::SendKeystroke", "alt-~"],
+      "alt-!": ["terminal::SendKeystroke", "alt-!"],
+      "alt-@": ["terminal::SendKeystroke", "alt-@"],
+      "alt-#": ["terminal::SendKeystroke", "alt-#"],
+      "alt-$": ["terminal::SendKeystroke", "alt-$"],
+      "alt-%": ["terminal::SendKeystroke", "alt-%"],
+      "alt-^": ["terminal::SendKeystroke", "alt-^"],
+      "alt-&": ["terminal::SendKeystroke", "alt-&"],
+      "alt-*": ["terminal::SendKeystroke", "alt-*"],
+      "alt-p": ["terminal::SendKeystroke", "alt-p"],
+      "alt-n": ["terminal::SendKeystroke", "alt-n"],
+      "alt-i": ["terminal::SendKeystroke", "alt-i"],
+    },
+  },
+]
